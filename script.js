@@ -179,4 +179,22 @@ if (videoContainer) {
     });
 }
 
+// ===== Contact Form Handling =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Show success message
+        alert('شكراً لتواصلك معنا! سنرد عليك قريباً على ' + email);
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
+
 console.log('Linam Scotch Website - Script loaded successfully!');
