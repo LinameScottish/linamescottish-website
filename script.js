@@ -182,18 +182,13 @@ if (videoContainer) {
 // ===== Contact Form Handling =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+    contactForm.action = 'https://formspree.io/f/xyzgqvkd';
+    contactForm.method = 'POST';
+    
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Show success message
-        alert('شكراً لتواصلك معنا! سنرد عليك قريباً على ' + email);
-        
-        // Reset form
-        contactForm.reset();
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'جاري الإرسال...';
     });
 }
 
