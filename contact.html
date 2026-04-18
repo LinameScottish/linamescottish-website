@@ -142,7 +142,7 @@
                         <h2 class="contact-form-title">تواصل معنا</h2>
                         <p class="contact-form-subtitle">نحن هنا للإجابة على جميع استفساراتك</p>
                     </div>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbdqyllq" method="POST">
                         <div class="form-group">
                             <label for="name" class="form-label">الاسم</label>
                             <input type="text" id="name" name="name" class="form-input" placeholder="أدخل اسمك" required>
@@ -181,7 +181,6 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
     <script>
         // Contact page specific script
         const contactForm = document.getElementById('contactForm');
@@ -190,41 +189,15 @@
         const userName = document.getElementById('userName');
 
         if (contactForm) {
-            contactForm.action = 'https://formspree.io/f/xbdqyllq';
-            contactForm.method = 'POST';
-            
             contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
                 const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
                 
-                // Create FormData
-                const formData = new FormData(contactForm);
-                
-                // Send to Formspree
-                fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // Show success message
-                        userName.textContent = name;
-                        formContainer.style.display = 'none';
-                        successMessage.classList.add('show');
-                    } else {
-                        alert('حدث خطأ، يرجى المحاولة مرة أخرى');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('حدث خطأ، يرجى المحاولة مرة أخرى');
-                });
+                // Show success message after a short delay
+                setTimeout(() => {
+                    userName.textContent = name;
+                    formContainer.style.display = 'none';
+                    successMessage.classList.add('show');
+                }, 1000);
             });
         }
     </script>
