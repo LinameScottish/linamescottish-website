@@ -182,7 +182,7 @@ if (videoContainer) {
 // ===== Contact Form Handling =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.action = 'https://formspree.io/f/xyzgqvkd';
+    contactForm.action = 'https://formspree.io/f/xbdqyllq';
     contactForm.method = 'POST';
     
     contactForm.addEventListener('submit', (e) => {
