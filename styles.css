@@ -594,8 +594,8 @@ body {
 }
 
 .avatar {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     display: flex;
@@ -605,6 +605,15 @@ body {
     font-size: 28px;
     font-weight: 700;
     flex-shrink: 0;
+}
+
+.avatar-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(139, 132, 183, 0.2);
 }
 
 .testimonial-info {
