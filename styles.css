@@ -118,6 +118,79 @@ body {
     width: 100%;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        box-shadow: 0 5px 20px rgba(139, 132, 183, 0.2);
+        border-top: 2px solid var(--primary-color);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        text-align: right;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+}
+
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
