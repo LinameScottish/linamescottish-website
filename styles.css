@@ -285,6 +285,12 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-large {
+    padding: 18px 50px;
+    font-size: 18px;
 }
 
 .btn {
