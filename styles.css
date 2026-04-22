@@ -598,6 +598,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     position: relative;
+    scroll-margin-top: 150px;
 }
 
 .stats-grid {
