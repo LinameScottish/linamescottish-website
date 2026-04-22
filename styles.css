@@ -294,34 +294,25 @@ body {
     font-size: 18px;
 }
 
-.btn-icon {
+.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-underline {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--primary-dark), transparent);
+    border-radius: 2px;
     display: none;
-    font-size: 20px;
-    color: var(--primary-color);
-    animation: float 3s ease-in-out infinite;
 }
 
 @media (min-width: 769px) {
-    .btn-icon {
-        display: inline-block;
+    .btn-underline {
+        display: block;
     }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.btn-icon-left {
-    animation-delay: 0s;
-}
-
-.btn-icon-right {
-    animation-delay: 0.3s;
 }
 
 .btn {
