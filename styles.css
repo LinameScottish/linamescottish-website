@@ -291,7 +291,8 @@ body {
 
 .btn-large {
     padding: 18px 50px;
-    font-size: 18px;
+    font-size: 22px;
+    text-align: center;
 }
 
 .btn-wrapper {
