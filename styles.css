@@ -294,13 +294,6 @@ body {
     font-size: 18px;
 }
 
-@media (min-width: 769px) {
-    .btn-large {
-        padding: 18px 80px;
-        min-width: 400px;
-    }
-}
-
 .btn-wrapper {
     display: flex;
     flex-direction: column;
